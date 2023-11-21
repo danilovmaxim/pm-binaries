@@ -1,0 +1,196 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "pmvast",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "pmvast"
+      },
+      {
+        "kind": "Import",
+        "name": "playwiremobile",
+        "printedName": "playwiremobile",
+        "declKind": "Import",
+        "moduleName": "pmvast"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "pmvast",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "pmvast"
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "pmvast"
+      },
+      {
+        "kind": "Import",
+        "name": "playwiremobile",
+        "printedName": "playwiremobile",
+        "declKind": "Import",
+        "moduleName": "pmvast"
+      },
+      {
+        "kind": "Import",
+        "name": "GoogleInteractiveMediaAds",
+        "printedName": "GoogleInteractiveMediaAds",
+        "declKind": "Import",
+        "moduleName": "pmvast"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "pmvast",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "playwiremobile",
+        "printedName": "playwiremobile",
+        "declKind": "Import",
+        "moduleName": "pmvast"
+      },
+      {
+        "kind": "Import",
+        "name": "GoogleInteractiveMediaAds",
+        "printedName": "GoogleInteractiveMediaAds",
+        "declKind": "Import",
+        "moduleName": "pmvast"
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/maximdanilov\/Development\/Sigma\/Playwire\/playwire-mobile-ios\/pmvast\/PMVastInterstitial.swift",
+      "kind": "BooleanLiteral",
+      "offset": 743,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/maximdanilov\/Development\/Sigma\/Playwire\/playwire-mobile-ios\/pmvast\/PMVastFullScreenAdViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 544,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/maximdanilov\/Development\/Sigma\/Playwire\/playwire-mobile-ios\/pmvast\/PMVastFullScreenAdViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 563,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/maximdanilov\/Development\/Sigma\/Playwire\/playwire-mobile-ios\/pmvast\/PMVastFullScreenAdViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 635,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/maximdanilov\/Development\/Sigma\/Playwire\/playwire-mobile-ios\/pmvast\/PMVastFullScreenAdViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1395,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/maximdanilov\/Development\/Sigma\/Playwire\/playwire-mobile-ios\/pmvast\/PMVastFullScreenAdViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1503,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/maximdanilov\/Development\/Sigma\/Playwire\/playwire-mobile-ios\/pmvast\/PMVastFullScreenAdViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1601,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/maximdanilov\/Development\/Sigma\/Playwire\/playwire-mobile-ios\/pmvast\/PMVastFullScreenAdViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1705,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/maximdanilov\/Development\/Sigma\/Playwire\/playwire-mobile-ios\/pmvast\/PMVastFullScreenAdViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1776,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/maximdanilov\/Development\/Sigma\/Playwire\/playwire-mobile-ios\/pmvast\/PMVastFullScreenAdViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2703,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/maximdanilov\/Development\/Sigma\/Playwire\/playwire-mobile-ios\/pmvast\/PMVastFullScreenAdViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2707,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/maximdanilov\/Development\/Sigma\/Playwire\/playwire-mobile-ios\/pmvast\/PMVastFullScreenAdViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 235,
+      "length": 32,
+      "value": "\"pmvast.PMVastFullScreenAdViewController\""
+    },
+    {
+      "filePath": "\/Users\/maximdanilov\/Development\/Sigma\/Playwire\/playwire-mobile-ios\/pmvast\/PMVastNetwork.swift",
+      "kind": "BooleanLiteral",
+      "offset": 396,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/maximdanilov\/Development\/Sigma\/Playwire\/playwire-mobile-ios\/pmvast\/PMVastNetwork.swift",
+      "kind": "BooleanLiteral",
+      "offset": 524,
+      "length": 4,
+      "value": "true"
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
+// swift-module-flags: -target x86_64-apple-ios12.4-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name playwiremobile
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import Foundation
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+@_exported import playwiremobile
+@objc @_hasMissingDesignatedInitializers @objcMembers final public class PlaywireMobile : ObjectiveC.NSObject {
+  @objc public static let shared: playwiremobile.PlaywireMobile
+  @objc final public func initialize(publisherId: Swift.String, appId: Swift.String, viewController: UIKit.UIViewController, completionHandler: @escaping () -> Swift.Void)
+  @objc deinit
+}
+@objc @_Concurrency.MainActor(unsafe) open class PMFullScreenAdViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) final public let adContentContainer: UIKit.UIView
+  @_Concurrency.MainActor(unsafe) public init(fullScreenAd: any playwiremobile.PMFullScreenAd, countDownVisible: Swift.Bool, muteVisible: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillTransition(to size: CoreFoundation.CGSize, with coordinator: any UIKit.UIViewControllerTransitionCoordinator)
+  @_Concurrency.MainActor(unsafe) open func setupLayout()
+  @_Concurrency.MainActor(unsafe) open func setupConstraints()
+  @_Concurrency.MainActor(unsafe) open func setupHandlers()
+  @objc @_Concurrency.MainActor(unsafe) open func close()
+  @_Concurrency.MainActor(unsafe) open func setContdown(value: Swift.Int)
+  @objc @_Concurrency.MainActor(unsafe) open func onMutePressed()
+  @_Concurrency.MainActor(unsafe) open var isMuted: Swift.Bool {
+    get
+    set(value)
+  }
+  @objc deinit
+}
+public protocol PMAdDelegate {
+}
+public protocol PMAd {
+  var adLoader: playwiremobile.PMAdLoader { get }
+  var network: any playwiremobile.PMNetwork { get }
+  var delegate: (any playwiremobile.PMAdDelegate)? { get set }
+}
+public protocol PMFullScreenAdDelegate : playwiremobile.PMAdDelegate {
+  func fullScreenAdClosed(fullScreen: any playwiremobile.PMFullScreenAd)
+}
+public protocol PMFullScreenAd : playwiremobile.PMAd {
+  func show(from vc: UIKit.UIViewController)
+}
+public struct PMConfigUnit : Swift.Decodable {
+  public let name: Swift.String
+  public let mode: playwiremobile.PMConfigUnitMode
+  public let timeToClose: Swift.Int
+  public let networks: [playwiremobile.PMConfigUnitNetwork]?
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum PMConfigUnitMode : Swift.String, Swift.Decodable {
+  case Interstitial
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct PMConfigUnitNetwork : Swift.Decodable {
+  public let name: Swift.String
+  public let unit: Swift.String
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct PMAdLoaderConfiguration {
+  public let viewController: UIKit.UIViewController?
+  public init(viewController: UIKit.UIViewController?)
+}
+public class PMAdLoader {
+  final public let config: playwiremobile.PMConfig?
+  final public let configUnit: playwiremobile.PMConfigUnit?
+  public var isLaunched: Swift.Bool {
+    get
+  }
+  public init(_ adUnitName: Swift.String)
+  convenience public init(_ adUnitName: Swift.String, _ configuration: playwiremobile.PMAdLoaderConfiguration)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers final public class PMInterstitialAdLoader : playwiremobile.PMAdLoader {
+  final public func load(onComplete: @escaping (_ interstitial: (any playwiremobile.PMInterstitialAd)?) -> Swift.Void)
+  override public init(_ adUnitName: Swift.String)
+  @objc deinit
+}
+public protocol PMInterstitialAdDelegate : playwiremobile.PMFullScreenAdDelegate {
+  func fullScreenAdClosed(fullScreen: any playwiremobile.PMFullScreenAd)
+}
+public protocol PMInterstitialAd : playwiremobile.PMFullScreenAd {
+}
+public protocol PMNetwork {
+  static var initialized: Swift.Bool { get }
+  static func initialize(config: playwiremobile.PMConfigNetwork, onComplete: ((_ result: Any?) -> Swift.Void)?)
+  static func create() -> any playwiremobile.PMNetwork
+  func supportsMode(mode: playwiremobile.PMConfigUnitMode) -> Swift.Bool
+  func load(config: playwiremobile.PMConfig, configUnit: playwiremobile.PMConfigUnit, configUnitNetwork: playwiremobile.PMConfigUnitNetwork, loaderConfiguration: playwiremobile.PMAdLoaderConfiguration?, onComplete: @escaping () -> Swift.Void)
+  func isSuccess() -> Swift.Bool
+  func asInterstitial(loader: playwiremobile.PMAdLoader) -> (any playwiremobile.PMInterstitialAd)?
+}
+public enum PMConfigNetworkType : Swift.String, Swift.Decodable {
+  case Mock
+  case Vast
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct PMConfigNetwork : Swift.Decodable {
+  public let type: playwiremobile.PMConfigNetworkType
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct PMConfig : Swift.Decodable {
+  public let app: playwiremobile.PMConfigApp?
+  public let networks: [Swift.String : playwiremobile.PMConfigNetwork]?
+  public let units: [playwiremobile.PMConfigUnit]?
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct PMConfigApp : Swift.Decodable {
+  public let store: Swift.String?
+  public let childProtection: Swift.Bool?
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension playwiremobile.PMConfigUnitMode : Swift.Equatable {}
+extension playwiremobile.PMConfigUnitMode : Swift.Hashable {}
+extension playwiremobile.PMConfigUnitMode : Swift.RawRepresentable {}
+extension playwiremobile.PMConfigNetworkType : Swift.Equatable {}
+extension playwiremobile.PMConfigNetworkType : Swift.Hashable {}
+extension playwiremobile.PMConfigNetworkType : Swift.RawRepresentable {}
