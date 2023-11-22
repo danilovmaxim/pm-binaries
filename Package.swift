@@ -27,11 +27,11 @@ let package = Package(
         ),
         .binaryTarget(
             name: "PlaywireMobile",
-            path: "playwiremobile.xcframework"
+            path: "PlaywireMobile.xcframework"
         ),
         .binaryTarget(
             name: "PlaywireMobileVAST",
-            path: "pmvast.xcframework"
+            path: "PlaywireMobileVAST.xcframework"
         )
     ]
 )
