@@ -278,7 +278,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_attribute(external_source_symbol)
 # pragma push_macro("any")
 # undef any
-# pragma clang attribute push(__attribute__((external_source_symbol(language="Swift", defined_in="playwiremobile",generated_declaration))), apply_to=any(function,enum,objc_interface,objc_category,objc_protocol))
+# pragma clang attribute push(__attribute__((external_source_symbol(language="Swift", defined_in="PlaywireMobile",generated_declaration))), apply_to=any(function,enum,objc_interface,objc_category,objc_protocol))
 # pragma pop_macro("any")
 #endif
 
@@ -288,7 +288,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @class NSString;
 @class NSBundle;
 
-SWIFT_CLASS("_TtC14playwiremobile28PMFullScreenAdViewController")
+SWIFT_CLASS("_TtC14PlaywireMobile28PMFullScreenAdViewController")
 @interface PMFullScreenAdViewController : UIViewController
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 - (void)viewDidLoad;
@@ -300,15 +300,15 @@ SWIFT_CLASS("_TtC14playwiremobile28PMFullScreenAdViewController")
 @end
 
 
-/// Playwire class is the main object in PlaywireMobile library
+/// PlaywireMobileAds class is the main object in PlaywireMobile library
 /// It uses ConfigFileLoader to load the app’s config file
 /// See <code>PMConfigLoader</code>
 /// Based on config file content it will initialize and hold required third party components
 /// See <code>PMNetworkInterface</code>
-SWIFT_CLASS("_TtC14playwiremobile14PlaywireMobile")
-@interface PlaywireMobile : NSObject
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) PlaywireMobile * _Nonnull shared;)
-+ (PlaywireMobile * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS("_TtC14PlaywireMobile17PlaywireMobileAds")
+@interface PlaywireMobileAds : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) PlaywireMobileAds * _Nonnull shared;)
++ (PlaywireMobileAds * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
 - (void)initializeWithPublisherId:(NSString * _Nonnull)publisherId appId:(NSString * _Nonnull)appId viewController:(UIViewController * _Nonnull)viewController completionHandler:(void (^ _Nonnull)(void))completionHandler;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");

@@ -1,11 +1,11 @@
-framework module playwiremobile {
-  umbrella header "playwiremobile.h"
+framework module PlaywireMobile {
+  umbrella header "PlaywireMobile.h"
 
   export *
   module * { export * }
 }
 
-module playwiremobile.Swift {
-  header "playwiremobile-Swift.h"
+module PlaywireMobile.Swift {
+  header "PlaywireMobile-Swift.h"
   requires objc
 }
