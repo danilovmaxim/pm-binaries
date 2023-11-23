@@ -9,20 +9,17 @@ let package = Package(
     products: [
         .library(
             name: "PlaywireMobile",
-            targets: ["_PlaywireMobile", "_PlaywireMobileVAST"]
+            targets: ["PlaywireMobile"]
         ),
+        .library(
+            name: "PlaywireMobileVAST",
+            targets: ["_PlaywireMobileVAST"]
+        )
     ],
     dependencies: [
         .package(url: "https://github.com/googleads/swift-package-manager-google-interactive-media-ads-ios", exact: "3.19.2")
     ],
     targets: [
-        .target(
-            name: "_PlaywireMobile",
-            dependencies: [
-                "PlaywireMobile"
-            ],
-            path: "PlaywireMobile"
-        ),
         .target(
             name: "_PlaywireMobileVAST",
             dependencies: [
