@@ -9,7 +9,7 @@ let package = Package(
     products: [
         .library(
             name: "PlaywireMobile",
-            targets: ["_PlaywireMobile"]
+            targets: ["_PlaywireMobile", "_PlaywireMobileVAST"]
         ),
     ],
     dependencies: [
@@ -19,11 +19,18 @@ let package = Package(
         .target(
             name: "_PlaywireMobile",
             dependencies: [
+                "PlaywireMobile"
+            ],
+            path: "PlaywireMobile"
+        ),
+        .target(
+            name: "_PlaywireMobileVAST",
+            dependencies: [
                 "PlaywireMobile",
                 "PlaywireMobileVAST",
                 .product(name: "GoogleInteractiveMediaAds", package: "swift-package-manager-google-interactive-media-ads-ios")
             ],
-            path: "PlaywireMobile"
+            path: "PlaywireMobileVAST"
         ),
         .binaryTarget(
             name: "PlaywireMobile",
